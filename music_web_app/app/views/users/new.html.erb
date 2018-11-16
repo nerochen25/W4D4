@@ -1,0 +1,39 @@
+
+<section class="page">
+  <div class="centered-box">
+    <h1 style="font-size: 40px;
+  color: #39BAAC;
+  margin-bottom: 30px;">New User</h1>
+
+    <a style="display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: skyblue;
+  color: #000;
+  width: 100px;
+  margin-bottom: 20px;" href="<%= new_session_url %>">Go to sign-in</a>
+    <form action="<%= users_url %>" method="post">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+      <label style="color: white;" for="user_email_address">Email</label>
+      <input type="text"
+        name="user[email_address]"
+        id="user_email_address"
+        value="<%= @user.email_address %>">
+      <br>
+
+      <label style="color: white;" for="user_password">Password</label>
+      <input type="password"
+        name="user[password]"
+        id="user_password"
+        value="<%= @user.password %>">
+      <br>
+
+      <input type="submit" action="">
+    </form>
+  </div>
+</section>

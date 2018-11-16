@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html style="background: #343030;">
+  <head>
+    <h1
+    style="color: #685206;
+    font-size: 500%;">Music App</h1>
+    <title>MusicWebApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="font-family: "Courier New", Courier, monospace">
+    <%= yield %>
+  </body>
+</html>

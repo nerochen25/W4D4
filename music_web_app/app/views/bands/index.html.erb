@@ -1,0 +1,33 @@
+
+<h2> BANDS
+  <br>
+  <% @bands.each do |band| %>
+    <%= band.name %>
+  <% end %>
+</h2>
+
+<br>
+
+<h2>
+  <br>
+  <a href="<%= bands_url %>">Take me Home</a>
+</h2>
+
+<h2> LINKS
+  <br>
+  <a href="<%= new_band_url %>">New Band</a>
+</h2>
+
+<%= current_user.email_address %>
+<form action="<%= session_url %>" method="post">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Logout">
+</form>
